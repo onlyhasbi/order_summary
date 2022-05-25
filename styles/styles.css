@@ -13,118 +13,128 @@
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 html,
 body {
   font-size: 16px;
   font-family: "Red Hat Display", sans-serif;
 }
 
-main {
-  width: 100%;
-  height: 100vh;
+body {
   background-color: var(--Pale-blue);
-  background-image: url("../images/pattern-background-desktop.svg");
+  background-image: url("../images/pattern-background-mobile.svg");
   background-repeat: no-repeat;
-  background-position: 0% 0%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-position: center top;
 }
 
 .card {
-  width: 25.7rem;
-  margin: 0 auto;
-  border-radius: 1rem;
-  padding-bottom: 2rem;
+  width: 20.51rem;
+  margin: 4.45rem auto;
+  overflow: hidden;
+  border-radius: 1.3rem;
+  padding-bottom: 1rem;
   background-color: white;
   box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
 }
 
 .card img {
   width: 100%;
+  height: auto;
   display: block;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
 }
 
 .card-content {
   margin: 0 auto;
-  width: 18rem;
+  width: 17rem;
   text-align: center;
 }
 
 .card-content h1 {
-  margin-top: 2.7rem;
-  font-size: 1.6rem;
+  margin-top: 1.85rem;
+  font-size: 1.4rem;
   font-weight: 900;
   color: var(--Dark-blue);
 }
 
 .card-content p {
-  margin-top: 1rem;
-  font-size: 0.97rem;
-  line-height: 1.5;
+  margin-top: 1.1rem;
+  font-size: 0.98rem;
+  line-height: 1.6;
   color: var(--Desaturated-blue);
 }
 
 .card-price {
-  width: 70%;
+  width: 16.5rem;
   margin: 0 auto;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   background-color: var(--Very-pale-blue);
   border-radius: 0.75rem;
-  padding: 1.5rem 1rem;
-  display: flex;
-  align-items: center;
-  gap: 5rem;
-}
-
-.price-plan {
+  padding: 1rem 0.5rem;
   display: flex;
   align-items: center;
 }
 
-.price-plan img {
+.price-icon {
+  width: 3rem;
+  margin-right: 1.2rem;
+  margin-left: 0.5rem;
+}
+
+.price-icon img {
   display: block;
-  width: 2.75rem;
-  margin-right: 1rem;
-  margin-left: 0.3rem;
+  width: 100%;
+  height: auto;
+}
+
+.price-content {
+  margin-right: auto;
 }
 
 .price-content h2 {
-  font-size: 1rem;
+  font-size: 0.9rem;
+  padding-bottom: 0.3rem;
   font-weight: 900;
   color: var(--Dark-blue);
 }
 
 .price-content p {
   color: var(--Desaturated-blue);
+  font-size: 0.9rem;
 }
 
 .price-action {
   font-size: 0.8rem;
   color: var(--Bright-blue);
   font-weight: 700;
+  margin-right: 0.6rem;
+  text-decoration: underline;
 }
 
 .price-action:hover {
   text-decoration: none;
+  opacity: 0.7;
 }
 
 .button-group {
   display: flex;
   flex-direction: column;
-  width: 77.6%;
+  width: 17.5rem;
   margin: 0 auto;
-  margin-top: 1.75rem;
+  margin-top: 1.5rem;
+  text-align: center;
 }
 
 .btn {
   border: none;
   outline: none;
   background: transparent;
-  padding: 0.9rem 0;
+  padding: 0.92rem 0;
   font-weight: 900;
+  font-size: 0.95rem;
 }
 
 .button-proceed {
@@ -140,7 +150,7 @@ main {
 }
 
 .button-cancel {
-  margin-top: 0.8rem;
+  margin-top: 0.6rem;
   color: var(--Desaturated-blue);
 }
 
@@ -149,28 +159,92 @@ main {
   cursor: pointer;
 }
 
-@media (max-width: 414px) {
+@media screen and (min-width: 800px) {
+  body {
+    background-image: url("../images/pattern-background-desktop.svg");
+  }
+
   .card {
-    width: 85%;
+    margin: 6.35rem auto;
+    width: 28.1rem;
+    padding-bottom: 2.15rem;
   }
 
   .card-content {
-    width: 16rem;
+    width: 19rem;
+  }
+
+  .card-content h1 {
+    margin-top: 2.85rem;
+    font-size: 1.75rem;
+  }
+
+  .card-content p {
+    margin-top: 1rem;
+    line-height: 1.65;
+    letter-spacing: 0.01rem;
   }
 
   .card-price {
-    gap: 2rem;
+    width: 20rem;
+    margin-top: 1.3rem;
+    border-radius: 0.75rem;
+    padding: 1.52rem 1rem;
   }
 
-  .price-content h3 {
-    font-size: 0.85rem;
+  .price-icon {
+    margin-left: 0.45rem;
+    margin-right: 1.3rem;
+  }
+
+  .price-content h2 {
+    padding-bottom: 0.5rem;
+    font-size: 1rem;
   }
 
   .price-content p {
+    font-size: 1rem;
+    line-height: 1.1;
+  }
+
+  .price-action {
     font-size: 0.9rem;
+    margin-right: 0.35rem;
   }
 
   .button-group {
-    width: 80%;
+    width: 22.1rem;
+    margin-top: 2.05rem;
+  }
+
+  .btn {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0.92rem 0;
+    font-weight: 900;
+    font-size: 0.95rem;
+  }
+
+  .button-proceed {
+    background-color: var(--Bright-blue);
+    color: white;
+    border-radius: 0.6rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  }
+
+  .button-proceed:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  .button-cancel {
+    margin-top: 1.05rem;
+    color: var(--Desaturated-blue);
+  }
+
+  .button-cancel:hover {
+    color: var(--Dark-blue);
+    cursor: pointer;
   }
 }
